@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "macos_keychain"
+author = "Juan Gonzalez"
+author-email = "jrg2156@gmail.com"
+home-page = "https://github.com/juanrgon/macos_keychain"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
