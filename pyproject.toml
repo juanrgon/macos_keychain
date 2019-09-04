@@ -1,35 +1,17 @@
-[tool.black]
-exclude = '''
-/(
-    \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-)/
-'''
+[tool.poetry]
+name = "macos_keychain"
+version = "0.1.0"
+description = "A Simple MacOS Keychain Store"
+authors = ["Juan Gonzalez <jrg2156@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+sh = "^1.12"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^1.18"
 
 [build-system]
-requires = ["flit"]
-build-backend = "flit.buildapi"
-
-[tool.flit.metadata]
-module = "macos_keychain"
-author = "Juan Gonzalez"
-author-email = "jrg2156@gmail.com"
-home-page = "https://github.com/juanrgon/macos_keychain"
-description-file = "README.md"
-classifiers = ["License :: OSI Approved :: MIT License"]
-requires = [
-    "sh"
-]
-
-[tool.flit.metadata.requires-extra]
-dev = [
-    "ipython",
-    "pre-commit"
-]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
