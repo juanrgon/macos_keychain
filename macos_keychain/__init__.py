@@ -1,4 +1,7 @@
 """MacOS keychain password manager"""
-from .main import ls, rm, get, add
+from .main import add
+from .main import get
+from .main import ls
+from .main import rm
 
-__version__ = "0.0.1"
+__all__ = ["add", "get", "ls", "rm"]
