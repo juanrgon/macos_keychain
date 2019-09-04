@@ -6,13 +6,13 @@ import sh
 MACOS_KEYCHAIN_PREFIX = "Python macos_keychain"
 
 
-def add(*, name: str, password: str):
+def add(*, name: str, value: str):
     out = io.StringIO()
     sh.security(
         "add-generic-password",
         a=getpass.getuser(),
         s=f"{MACOS_KEYCHAIN_PREFIX}: {name}",
-        w=password,
+        w=value,
         _out=out,
     )
     return out.getvalue()
