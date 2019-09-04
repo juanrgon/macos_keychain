@@ -1,3 +1,18 @@
+[tool.black]
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
 [build-system]
 requires = ["flit"]
 build-backend = "flit.buildapi"
@@ -8,4 +23,12 @@ author = "Juan Gonzalez"
 author-email = "jrg2156@gmail.com"
 home-page = "https://github.com/juanrgon/macos_keychain"
 classifiers = ["License :: OSI Approved :: MIT License"]
+requires = [
+    "sh"
+]
 
+[tool.flit.metadata.requires-extra]
+dev = [
+    "ipython",
+    "pre-commit"
+]
